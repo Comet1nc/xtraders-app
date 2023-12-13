@@ -68,5 +68,7 @@
       </div>
     </div>
   </section>
-  <button class="open-card">VIEW</button>
+  <button class="open-card" (click)="this.service.loadingScreen$.next(true)">
+    VIEW
+  </button>
 </div>

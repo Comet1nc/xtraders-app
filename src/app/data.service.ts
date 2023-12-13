@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Data } from './models/data.model';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
+  loadingScreen$ = new BehaviorSubject<boolean>(false);
   data$: Observable<Data> = of({
     competitions: [
       {

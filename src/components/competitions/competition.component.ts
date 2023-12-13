@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 import { Competition } from 'src/app/models/competition.model';
 
 @Component({
@@ -9,4 +10,5 @@ import { Competition } from 'src/app/models/competition.model';
 })
 export class CompetitionComponent {
   @Input() competition!: Competition;
+  constructor(public service: DataService) {}
 }

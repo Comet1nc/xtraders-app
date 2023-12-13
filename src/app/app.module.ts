@@ -6,6 +6,7 @@ import { CompetitionComponent } from 'src/components/competitions/competition.co
 import { HeaderComponent } from 'src/components/header/header.component';
 import { BtnAddComponent } from 'src/components/overlay/btn-add/btn-add.component';
 import { UserCardComponent } from 'src/components/competitions/user-card/user-card.component';
+import { LoadingScreenComponent } from 'src/components/overlay/loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserCardComponent } from 'src/components/competitions/user-card/user-ca
     HeaderComponent,
     BtnAddComponent,
     UserCardComponent,
+    LoadingScreenComponent,
   ],
   imports: [BrowserModule],
   providers: [],

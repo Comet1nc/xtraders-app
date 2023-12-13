@@ -9,6 +9,11 @@
     ></app-competition>
   </div>
   <div class="overlay">
-    <app-btn-add></app-btn-add>
+    <app-btn-add
+      (click)="this.dataService.loadingScreen$.next(true)"
+    ></app-btn-add>
+    <app-loading-screen
+      *ngIf="loadingScreenDelayed$ | async"
+    ></app-loading-screen>
   </div>
 </div>

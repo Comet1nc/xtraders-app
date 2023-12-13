@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="profile">
+  <div class="profile" (click)="this.service.loadingScreen$.next(true)">
     <img
       width="30px"
       height="30px"
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <button class="add-friends">
+  <button class="add-friends" (click)="this.service.loadingScreen$.next(true)">
     <img class="icon" src="../../assets/header/add-friends.svg" />
   </button>
 </div>
