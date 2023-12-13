@@ -1,5 +1,7 @@
 :host {
   display: block;
+  width: 100%;
+  max-width: 600px;
 }
 
 * {
@@ -7,6 +9,7 @@
 }
 
 .card {
+  box-sizing: border-box;
   background-color: #14171A;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
