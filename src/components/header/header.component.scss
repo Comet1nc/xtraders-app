@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+p {
+  line-height: 14px;
+}
+
+button {
+  align-items: center;
+}
+
+.container {
+  justify-content: space-between;
+
+  .profile {
+    gap: 10px;
+
+    .user-info {
+      align-items: start;
+      flex-direction: column;
+      gap: 6px;
+
+
+      .name {
+        font-size: 14px;
+      }
+
+      .resources {
+        gap: 10px;
+        font-size: 12px;
+
+        .coins,
+        .level {
+          gap: 6px;
+        }
+      }
+    }
+  }
+}

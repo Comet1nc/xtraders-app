@@ -1,0 +1,217 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+.card {
+  background-color: #14171A;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: column;
+
+  .head {
+    justify-content: space-between;
+
+    .members {
+      margin-left: 5px;
+
+      .member-profile-picture {
+        width: 16px;
+        height: 16px;
+        margin-left: -5px;
+      }
+
+      .remaining-members-amount {
+        width: 16px;
+        height: 16px;
+        margin-left: -5px;
+        padding-left: 1px;
+        background-color: #2B2E30;
+        border-radius: 50%;
+        font-size: 8px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .can-join-info {
+      font-size: 10px;
+      line-height: 15px;
+      opacity: 50%;
+    }
+  }
+
+  .card-title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    opacity: 50%;
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+
+  .best-users-cards {
+    flex-direction: column;
+    gap: 10px;
+
+    .user-card {
+      height: 77px;
+      border-top-left-radius: 8px;
+
+      .place-number {
+        height: 77px;
+        width: 50px;
+      }
+
+      .profile-picture {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .info {
+        box-sizing: border-box;
+        height: 77px;
+        width: calc(100% - 50px);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(15, 44, 30) 100%);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        flex-direction: column;
+        gap: 4px;
+        padding: 11px 12px 11px 22px;
+
+        .full-name {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 500;
+        }
+
+        .is-user-verified {
+          margin-left: 5px;
+          padding-bottom: 3px;
+        }
+      }
+
+      .content {
+        justify-content: space-between;
+
+        .details {
+          gap: 10px;
+
+          .category {
+            flex-direction: column;
+
+            .amount {
+              font-size: 14px;
+              line-height: 17px;
+              font-weight: 500;
+            }
+
+            .title {
+              font-size: 10px;
+              line-height: 11px;
+              opacity: 50%;
+            }
+          }
+        }
+
+        .profit {
+          flex-direction: column;
+
+
+          p {
+            font-weight: 600;
+            color: #88FFC7;
+          }
+
+          .raw {
+            font-size: 14px;
+            line-height: 18px;
+          }
+
+          .percentage {
+            font-size: 10px;
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+
+  .additional-info {
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    .first-place,
+    .prize {
+      gap: 8px;
+
+      .additional-user-data,
+      .additional-coin-data {
+        flex-direction: column;
+        justify-content: center;
+
+        .name,
+        .amount {
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 15px;
+        }
+
+        .tag {
+          font-size: 8px;
+          line-height: 10px;
+          opacity: 50%;
+        }
+      }
+    }
+
+    .amount-of-time {
+      margin-left: auto;
+      gap: 8px;
+
+      p {
+        color: #FF6F6F;
+      }
+
+      .value {
+        height: 24px;
+        width: 24px;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        border-radius: 50%;
+        background-color: #261516;
+        border: 0.5px solid #FF6F6F;
+      }
+
+      .time {
+        flex-direction: column;
+
+        .time-type {
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 14px;
+        }
+
+        .time-state {
+          font-size: 8px;
+          line-height: 10px;
+        }
+      }
+    }
+  }
+
+  .open-card {
+    justify-content: center;
+    background: linear-gradient(0deg, #303236, #303236), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    border: 0.5px solid #FFFFFF33;
+    border-radius: 13px;
+    padding: 14px 45px;
+  }
+}
