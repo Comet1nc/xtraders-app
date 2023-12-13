@@ -19,6 +19,14 @@ button {
 
   .profile {
     gap: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    padding: 4px;
+
+    &:active {
+      background-color: gray;
+      border-radius: 5px;
+    }
 
     .user-info {
       align-items: start;
@@ -39,6 +47,14 @@ button {
           gap: 6px;
         }
       }
+    }
+  }
+
+  .add-friends {
+    transition: transform 0.3s ease-in-out;
+
+    &:active {
+      transform: scale(1.3);
     }
   }
 }

@@ -4,6 +4,11 @@
   min-height: 100%;
   padding: 0 21px;
   padding-top: 21px;
+  box-sizing: border-box;
+  background-image: url('../assets/bg.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 
   .page-title {
     opacity: 50%;
@@ -12,4 +17,11 @@
     line-height: 33px;
     margin: 22px 0;
   }
+
+  .competition-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }

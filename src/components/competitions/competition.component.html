@@ -1,0 +1,72 @@
+<div class="card">
+  <section class="top">
+    <div class="members">
+      <img
+        src="../../assets/competitions/1-member-picture-small.png"
+        alt="member-picture"
+        class="member-profile-picture"
+      />
+      <img
+        src="../../assets/competitions/2-member-picture-small.png"
+        alt="member-picture"
+        class="member-profile-picture"
+      />
+      <img
+        src="../../assets/competitions/3-member-picture-small.png"
+        alt="member-picture"
+        class="member-profile-picture"
+      />
+      <p class="remaining-members-amount">
+        {{ competition.usersAmount - 3 }}
+      </p>
+    </div>
+    <p *ngIf="competition.isOver" class="can-join-info">Too late to join</p>
+  </section>
+  <h2 class="card-title">{{ competition.name }}</h2>
+  <section class="best-users-cards">
+    <app-user-card
+      [user]="u"
+      [index]="i"
+      *ngFor="let u of competition.bestUsers; let i = index"
+    ></app-user-card>
+  </section>
+  <section class="additional-info">
+    <div class="first-place">
+      <img
+        width="24"
+        height="24"
+        src="../../assets/competitions/roger-k-small.png"
+        class="profile-image"
+      />
+      <div class="additional-user-data">
+        <div class="name">
+          <p class="first-name">{{ competition.bestUsers[0].firstName }}</p>
+          <p class="last-name-letter">
+            {{ competition.bestUsers[0].lastName[0] }}
+          </p>
+        </div>
+        <p class="tag">{{ competition.bestUsers[0].tag }}</p>
+      </div>
+    </div>
+    <div class="prize">
+      <img
+        width="24"
+        height="24"
+        src="../../assets/competitions/additional-currency-img.svg"
+        class="currency-image"
+      />
+      <div class="additional-coin-data">
+        <div class="amount">20,000</div>
+        <div class="tag">@xBits prize</div>
+      </div>
+    </div>
+    <div class="amount-of-time" *ngIf="competition.isOver">
+      <p class="value">{{ competition.daysPast }}</p>
+      <div class="time">
+        <p class="time-type">Days</p>
+        <p class="time-state">past</p>
+      </div>
+    </div>
+  </section>
+  <button class="open-card">VIEW</button>
+</div>

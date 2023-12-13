@@ -1,5 +1,14 @@
 <div class="container">
+  <div class="overlay-blur"></div>
   <app-header></app-header>
   <h1 class="page-title">Competitions</h1>
-  <app-competitions></app-competitions>
+  <div class="competition-list">
+    <app-competition
+      *ngFor="let comp of (dataService.data$ | async)?.competitions"
+      [competition]="comp"
+    ></app-competition>
+  </div>
+  <div class="overlay">
+    <app-btn-add></app-btn-add>
+  </div>
 </div>
