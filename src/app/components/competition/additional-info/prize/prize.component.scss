@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+
+.prize {
+  gap: 8px;
+
+  .additional-coin-data {
+    flex-direction: column;
+    justify-content: center;
+
+    .amount {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    .tag {
+      font-size: 8px;
+      line-height: 10px;
+      opacity: 50%;
+    }
+  }
+}

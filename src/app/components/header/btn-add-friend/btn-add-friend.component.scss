@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+}
+
+* {
+  display: flex;
+}
+
+button {
+  align-items: center;
+}
+
+.add-friends {
+  transition: transform 0.1s ease-in-out;
+
+  &:active {
+    transform: scale(1.2);
+  }
+}

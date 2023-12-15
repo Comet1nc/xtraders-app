@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+.first-place {
+  gap: 8px;
+
+  .additional-user-data {
+    flex-direction: column;
+    justify-content: center;
+
+    .name {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    .tag {
+      font-size: 8px;
+      line-height: 10px;
+      opacity: 50%;
+    }
+  }
+}

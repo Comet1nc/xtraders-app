@@ -1,0 +1,152 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+.user-card {
+  height: 77px;
+  border-top-left-radius: 8px;
+  position: relative;
+
+  .rank-wrapper {
+    height: 77px;
+    width: 50px;
+    background-color: white;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    .rank-bg {
+      position: relative;
+
+      filter: blur(22px);
+
+      .ellipse-1 {
+        position: absolute;
+        bottom: 5px;
+      }
+
+      .ellipse-2 {
+        right: -51px;
+        top: 0;
+        position: absolute;
+      }
+    }
+
+    .rank {
+      span {
+        font-weight: 600;
+        font-style: italic;
+        color: #0B254D;
+        opacity: 20%;
+      }
+
+      .value {
+        font-size: 33px;
+      }
+
+      .suffix {
+        font-size: 23px;
+      }
+    }
+  }
+
+  .profile-picture {
+    position: absolute;
+    left: 11px;
+    bottom: 18px;
+  }
+
+  .info.profitable {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(15, 44, 30) 100%);
+
+    .profit {
+      p {
+        color: #88FFC7;
+      }
+    }
+  }
+
+  .info.noprofit {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(38, 16, 16) 100%);
+
+    .profit {
+      p {
+        color: #FF6F6F;
+      }
+    }
+  }
+
+  .info {
+    box-sizing: border-box;
+    height: 77px;
+    width: calc(100% - 50px);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 11px 12px 11px 22px;
+
+    .full-name {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+
+    .is-user-verified {
+      margin-left: 5px;
+      padding-bottom: 3px;
+    }
+
+    .content {
+      justify-content: space-between;
+
+      .details {
+        gap: 10px;
+
+        .category {
+          flex-direction: column;
+
+          .amount {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+          }
+
+          .title {
+            font-size: 10px;
+            line-height: 11px;
+            opacity: 50%;
+          }
+        }
+      }
+
+      .profit {
+        flex-direction: column;
+
+
+        p {
+          font-weight: 600;
+
+        }
+
+        .raw {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        .percentage {
+          font-size: 10px;
+          flex-direction: row-reverse;
+        }
+      }
+
+
+    }
+  }
+
+
+}

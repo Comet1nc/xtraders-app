@@ -1,0 +1,62 @@
+<div class="user-card">
+  <div class="rank-wrapper">
+    <div class="rank-bg">
+      <img
+        class="ellipse-1"
+        [src]="
+          '../../../../assets/competitions/place-bg/' + place + '/ellipse-1.svg'
+        "
+      />
+      <img
+        class="ellipse-2"
+        [src]="
+          '../../../../assets/competitions/place-bg/' + place + '/ellipse-2.svg'
+        "
+      />
+    </div>
+    <div class="rank">
+      <span class="value">{{ place }}</span>
+      <span class="suffix">{{ suffix }}</span>
+    </div>
+  </div>
+  <img
+    width="48"
+    height="41"
+    [src]="user.profilePictureUrl"
+    class="profile-picture"
+  />
+  <div class="info" [ngClass]="user.isProfitable ? 'profitable' : 'noprofit'">
+    <h3 class="full-name">
+      {{ user.firstName + " " + user.lastName }}
+      <img
+        *ngIf="user.isVerified"
+        src="../../assets/competitions/verified.svg"
+        class="is-user-verified"
+      />
+    </h3>
+    <div class="content">
+      <div class="details">
+        <div class="category">
+          <p class="amount">{{ user.alerts }}</p>
+          <p class="title">Alerts</p>
+        </div>
+        <div class="category">
+          <p class="amount">{{ user.winRate }}</p>
+          <p class="title">Win Rate</p>
+        </div>
+        <div class="category">
+          <p class="amount">{{ user.yield }}</p>
+          <p class="title">Yield</p>
+        </div>
+      </div>
+      <div class="profit">
+        <div class="raw">
+          <p class="is-profitable">{{ user.isProfitable ? "+" : "-" }}</p>
+          <p class="currency">{{ user.currency }}</p>
+          <p class="value">{{ user.moneyValue }}</p>
+        </div>
+        <p class="percentage">{{ user.percentage }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+* {
+  display: flex;
+}
+
+.members {
+  margin-left: 5px;
+
+  .member-profile-picture {
+    width: 16px;
+    height: 16px;
+    margin-left: -5px;
+  }
+
+  .remaining-members-amount {
+    width: 16px;
+    height: 16px;
+    margin-left: -5px;
+    padding-left: 1px;
+    background-color: #2B2E30;
+    border-radius: 50%;
+    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+}

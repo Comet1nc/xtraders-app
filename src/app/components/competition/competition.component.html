@@ -1,0 +1,29 @@
+<div class="card">
+  <section class="top">
+    <competition-members-amount
+      [membersAmount]="competition.usersAmount"
+    ></competition-members-amount>
+    <p *ngIf="competition.isOver" class="can-join-info">Too late to join</p>
+  </section>
+  <h2 class="card-title">{{ competition.name }}</h2>
+  <section class="best-users-cards">
+    <competition-user-card
+      [user]="u"
+      [index]="i"
+      *ngFor="let u of competition.bestUsers; let i = index"
+    ></competition-user-card>
+  </section>
+  <section class="additional-info">
+    <competition-first-place
+      [user]="competition.bestUsers[0]"
+    ></competition-first-place>
+    <competition-prize></competition-prize>
+    <competition-time-restrictions
+      *ngIf="competition.isOver"
+      [daysPast]="competition.daysPast"
+    ></competition-time-restrictions>
+  </section>
+  <button class="open-card" (click)="this.service.loadingScreen$.next(true)">
+    VIEW
+  </button>
+</div>

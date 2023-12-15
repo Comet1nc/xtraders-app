@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+}
+
+* {
+  display: flex;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #14171A;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 15px;
+  flex-direction: column;
+
+  .top {
+    justify-content: space-between;
+
+    .can-join-info {
+      font-size: 10px;
+      line-height: 15px;
+      opacity: 50%;
+    }
+  }
+
+  .card-title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    opacity: 50%;
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+
+  .best-users-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .additional-info {
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    .first-place,
+    .prize {
+      gap: 8px;
+
+      .additional-user-data,
+      .additional-coin-data {
+        flex-direction: column;
+        justify-content: center;
+
+        .name,
+        .amount {
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 15px;
+        }
+
+        .tag {
+          font-size: 8px;
+          line-height: 10px;
+          opacity: 50%;
+        }
+      }
+    }
+
+  }
+
+  .open-card {
+    justify-content: center;
+    background: linear-gradient(0deg, #303236, #303236), linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    border: 0.5px solid #FFFFFF33;
+    border-radius: 13px;
+    padding: 14px 0;
+
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:active {
+      transform: scale(1.1);
+    }
+
+    &:hover {
+      border: 0.5px solid rgb(0, 141, 151);
+    }
+  }
+}

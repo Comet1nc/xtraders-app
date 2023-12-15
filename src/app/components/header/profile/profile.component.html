@@ -1,0 +1,25 @@
+<div class="profile" (click)="this.service.loadingScreen$.next(true)">
+  <img
+    width="30px"
+    height="30px"
+    class="profile-picture"
+    src="../../assets/header/profile-picture.png"
+  />
+  <div class="user-info">
+    <div class="name">
+      <p class="first-name">Alex&nbsp;</p>
+      <p class="last-name-letter">G</p>
+    </div>
+    <div class="resources">
+      <div class="coins">
+        <img class="coin-icon" src="../../assets/header/coin-icon.svg" />
+        <p class="amount">3000</p>
+        <p class="currency-name">xBits</p>
+      </div>
+      <div class="level">
+        <img class="level-icon" src="../../assets/header/level-icon.svg" />
+        <p class="level-amount">85</p>
+      </div>
+    </div>
+  </div>
+</div>
